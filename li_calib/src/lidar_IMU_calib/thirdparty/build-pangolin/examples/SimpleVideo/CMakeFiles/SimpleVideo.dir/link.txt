@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -O3 -DNDEBUG  -rdynamic CMakeFiles/SimpleVideo.dir/main.cpp.o  -o SimpleVideo -Wl,-rpath,/home/jian/licalib_ws/src/lidar_IMU_calib/thirdparty/build-pangolin/src ../../src/libpangolin.so -lrt -lpthread -lOpenGL -lGLX -lGLU -lGLEW -lEGL -lSM -lICE -lX11 -lXext -lrt -lpthread -lOpenGL -lGLX -lGLU -lGLEW -lEGL -lSM -lICE -lX11 -lXext 

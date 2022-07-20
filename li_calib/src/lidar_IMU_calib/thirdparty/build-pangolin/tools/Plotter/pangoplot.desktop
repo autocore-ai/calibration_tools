@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Categories=Utility
+Name=PangoPlotter
+GenericName=Plotter
+Comment=View CSV data series
+Exec=/home/jian/licalib_ws/src/lidar_IMU_calib/thirdparty/build-pangolin/tools/Plotter/Plotter %U
+TryExec=/home/jian/licalib_ws/src/lidar_IMU_calib/thirdparty/build-pangolin/tools/Plotter/Plotter
+Icon=application-x-pango
+Terminal=false
+StartupNotify=false
+MimeType=text/csv;text/comma-separated-values;application/x-pangoplot;application/csv
