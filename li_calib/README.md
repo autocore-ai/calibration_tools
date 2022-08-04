@@ -52,7 +52,7 @@ source ./devel/setup.bash
 
 ## Trouble shooting
 
-During installation, some known issues have been solved
+During installation, some known issues have been solved.
 
 - Error: conflicting declaration ‘typedef struct LZ4_stream_t LZ4_stream_t'
 
@@ -68,6 +68,7 @@ sudo ln -s /usr/include/lz4hc.h /usr/include/flann/ext/lz4hc.h
 ```shell
 sudo apt install libglew-dev
 ```
+
 ## Examples
 
 Previously, the LI-Calib toolkit only supports `VLP-16` lidar with msg type `velodyne_msgs/VelodyneScan`. Currently, it has been expanded for general lidar input with msg type `sensor_msgs/PointCloud2` (Tested with ouster-64, the modification ideas will be described as following section). 
@@ -83,7 +84,7 @@ or (if unfamiliar with shell script)
 ```shell
 cd li_calib/
 source devel/setup.bash
-roslaunch roslaunch li_calib licalib_gui.launch
+roslaunch li_calib licalib_gui.launch
 ```
 
 The options in `calib.sh` the have the following meaning:
@@ -98,7 +99,7 @@ The options in `calib.sh` the have the following meaning:
 
 <img src="./src/lidar_IMU_calib/pic/ui.png" alt="UI" style="zoom: 50%;" />
 
-Following the step: 
+Follow the steps: 
 
 1. `Initialization`
 
@@ -120,7 +121,7 @@ Following the step:
 
 All the cache results are saved in the location of the dataset.
 
-**Note that the toolkit is implemented with only one thread, it would  response slowly while processing data. Please be patient** 
+**Note that the toolkit is implemented with only one thread, it would response slowly while processing data. Please be patient.** 
 
 ## Dataset from developers
 
@@ -153,7 +154,7 @@ Dataset collected by Autocore for validation are available at [here](https://dri
 Ouster and IMU are mounted as shown in:
 <img src="./src/lidar_IMU_calib/pic/fixture1.jpg" alt="fixture" style="zoom: 50%;" />
 
-Here, some tipps may be helpful if someone wants to record his own data:
+Here, some tips may be helpful if you want to record your own data:
 - For better performance, IMU settings: frequency 400hz, Baudrate: 230400. 
 - PTP time sync first for ouster lidar.
 - Scenario should contain many surfels (surface element), i.e. ground, wall, roof.
@@ -165,7 +166,7 @@ Here, some tipps may be helpful if someone wants to record his own data:
 
 ## Lidar point type expansion
 
-Originally, the developers support only velodyne scan as input. Here, I implement the new feature to take `sensor_msgs/PointCloud2` as input. See details as following:
+The original project only support velodyne scan as input. Here, I implemented the new feature to take `sensor_msgs/PointCloud2` as input. See details as following:
 
 In ~/src/lidar_IMU_calib/include/utils/pcl_utils.h, I add the following codes:
 
