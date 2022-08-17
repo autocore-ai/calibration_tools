@@ -1,0 +1,9 @@
+<library path="rviz2_capture_plugin_node">
+
+  <class
+    type="CaptureStatePanel"
+    base_class_type="rviz_common::Panel">
+    <description>CaptureStatePanel</description>
+  </class>
+
+</library>

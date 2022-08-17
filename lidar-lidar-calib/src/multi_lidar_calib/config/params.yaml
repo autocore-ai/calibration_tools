@@ -1,0 +1,45 @@
+/**:
+  ros__parameters:
+    # Waiting periods after longitudinal velocity become zero to ensure the vehicle is completely stopped
+    # default value 50, assuming the frequency of topic velocity_status is 50Hz 
+    num_wait_period: 50
+
+    # frames of main lidar used for mapping
+    total_count: 5
+
+    # save calib results to 
+    save_path: "./"
+
+    # save calib results file
+    file_res: "calib_res.csv"
+
+    # save calib pcd file
+    file_pcd: "result_with_sub_lidar.pcd"
+
+    # Topic for main lidar
+    main_lidar_topic: "/sensing/lidar/top/rectified/pointcloud"
+
+    # Topic for sub lidar
+    sub_lidar_topic: "/rslidar_points"
+
+    # Topic for velocity status
+    velocity_status_topic: "/vehicle/status/velocity_status"
+
+    # Initial transformation vector (x, y, z, roll, pitch, yaw), where euler angles are in rad 
+    trans_vector: [2.5, 0.0, -1.2, 0.0, 0.0, 0.0]
+    # # Initial transformation in translation and rotation
+    translation:  [2.5, 0.0, -1.2]
+    rotation: 
+      [ 
+        1.0,  0.0,  0.0,
+        0.0, 1.0,  0.0,
+        0.0,  0.0, 1.0
+      ]
+    # # Initial transformation matirx from sub lidar to main lidar
+    # trans_matirx: [ 
+    #     1.0,  0.0,  0.0,  0.0,
+    #     0.0, 1.0,  0.0,  0.0,
+    #     0.0,  0.0, 1.0,  0.0,
+    #     0.0,  0.0,  0.0,  1.0
+    #   ]
+  

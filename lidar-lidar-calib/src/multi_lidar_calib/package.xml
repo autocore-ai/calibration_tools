@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>multi_lidar_calib</name>
+  <version>0.0.1</version>
+  <description>A online multi lidar extrinsic parameter calibration tool</description>
+  <maintainer email="lucas.liu@autocore.ai">lucas</maintainer>
+  <license>AutoCore License</license>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>autoware_auto_vehicle_msgs</depend>
+  <depend>rviz2_capture_plugin_interface</depend>
+  <depend>fast_gicp</depend>
+  <depend>pcl</depend>
+  <depend>Eigen3</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
