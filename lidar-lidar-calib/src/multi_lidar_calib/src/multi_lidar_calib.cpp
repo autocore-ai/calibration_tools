@@ -57,7 +57,8 @@ MultiLidarCalibSub::MultiLidarCalibSub()
 
   if (save_path_.empty() || access(save_path_.c_str(), F_OK)==-1)
   {
-    //if the directory to save data is not accessible, data will be stored under home folder.
+    //if the directory to save data is not accessible, data will be stored under current folder.
+    save_path_ = "./";
     RCLCPP_INFO(this->get_logger(), "\033[1;31mThe user defined path to save data/pcd is not accessible, data will be stored under current path %s by default.\033[0m", save_path_.c_str());       
   }
   else
@@ -142,7 +143,7 @@ pcl::PointCloud<pcl::PointXYZI> MultiLidarCalibSub::draw_pointcloud(pcl::PointCl
 
 void MultiLidarCalibSub::capture_point_cloud()
 {
-  if(cloud_main_lidar_current_->points.size() == 0 || cloud_sub_lidar_current_->points.size() > 0 )
+  if(cloud_main_lidar_current_->points.size() > 0 && cloud_sub_lidar_current_->points.size() > 0 )
   {
     /* store current main lidar pointcloud and sub lidar pointcloud into pointcloud sequence */
     cloud_array_main_lidar_[pointcloud_stored_count_] = cloud_main_lidar_current_;

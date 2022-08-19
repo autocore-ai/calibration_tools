@@ -41,7 +41,7 @@ Either online or offline calibration is supported, the following 3 ROS2 topics a
 | ----- | ----- |
 | main_lidar_topic | sensor_msgs/msg/PointCloud2 |
 | sub_lidar_topic  | sensor_msgs/msg/PointCloud2 |
-| velocity_status_topic | autoware_auto_vehicle_msgs/msg/VelocityReport |
+| velocity_status_topic (optional) | autoware_auto_vehicle_msgs/msg/VelocityReport |
 
 The topic names are configured in the configuration file, please refer to step 3.
 
@@ -82,19 +82,19 @@ Before launching this tool, some parameters in src/multi_lidar_calib/config/para
 
 - Main LiDAR data will be captured automated when vehicle velocity is 0, otherwise, user should manually capture it when vehicle stops.
 
+  <img src="./src/multi_lidar_calib/pic/ui.png" alt="fixture" style="zoom: 10%;" />
+
+  Then you can find some info output in terminal, meaning successfully captured
+   
+  <img src="./src/multi_lidar_calib/pic/manual_capture.png" alt="fixture" style="zoom: 10%;" />
+
 - Drive vehicle slightly (circa 0.5~1 meter), and then stop until main LiDAR data is successfully captured.
 
 - Repeat above steps serveral times in accordance with parameter "total_count" configured in src/multi_lidar_calib/config/params.yaml
 
 - Calibration results will be output in terminal and saved under user-definde path.
 
-In the aboved shared google drive, you can find videos that show how the developers record data. After calibration, front LiDAR and top LiDAR are fused as the following figure shows:
-
-<img src="./src/multi_lidar_calib/pic/result_pcd.png" alt="fixture" style="zoom: 10%;" />
-
-The blue LiDAR points are from front LiDAR and the red are from top LiDAR, they are now concatenated visually well. And the corresponding calibration results are saved as following:
-
-<img src="./src/multi_lidar_calib/pic/result_csv.png" alt="fixture" style="zoom: 10%;" />
+  <img src="./src/multi_lidar_calib/pic/res_terminal.png" alt="fixture" style="zoom: 10%;" />
 
 ## Sample dataset
 
@@ -115,6 +115,14 @@ ros2 bag play rosbag2_2022_07_19-17_44_56_0.db3 --qos-profile-overrides-path rel
 ```
 
 The file "reliable_override.yaml" is located in the above folder as well.
+
+In the aboved shared google drive, you can find videos that show how the developers record data. After calibration, front LiDAR and top LiDAR are fused as the following figure shows:
+
+<img src="./src/multi_lidar_calib/pic/result_pcd.png" alt="fixture" style="zoom: 10%;" />
+
+The blue LiDAR points are from front LiDAR and the red are from top LiDAR, they are now concatenated visually well and translation & rotation vectors saved as following:
+
+<img src="./src/multi_lidar_calib/pic/result_csv.png" alt="fixture" style="zoom: 10%;" />
 
 ## Trouble shooting
 
