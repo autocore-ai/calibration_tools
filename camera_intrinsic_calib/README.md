@@ -19,7 +19,7 @@ See this [dataset](https://drive.google.com/drive/folders/1nM08yXUDFryCs7eShVZ35
 
 ## Example (io_circlesA_1200x800_16x29_50_20 in maker_board)
 ```bash
-   python intrinsic_calib.py -R 8 -C 29 -d 0.07 --save_result 1 --save_folder "your save path" --calib_folder "your sample path" -M "Aellipse" -i 2 -n 10
+   python3 intrinsic_calib.py -R 8 -C 29 -d 0.07 --save_result 1 --save_folder "your save path" --calib_folder "your sample path" -M "Aellipse" -i 2 -n 10
 ```
    After that，the calibrated result and modified image will be saved under above defined folder. Or you can see this shared link for [results](https://drive.google.com/drive/folders/1enVisQlP5RM6B48CfU72x6_6WSWDeOsA)
    
