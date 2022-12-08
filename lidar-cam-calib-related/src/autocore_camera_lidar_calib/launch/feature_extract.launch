@@ -1,0 +1,25 @@
+<launch>
+  <node 
+    pkg="autocore_camera_lidar_calib"
+    type="feature_extract"
+    name="feature_extract"
+    output="screen"
+  />
+
+  <param name="pair_num_c" type="int" value="1"/>
+  
+  <param name="pcd_file" type="string" value="$(find autocore_camera_lidar_calib)/data_pairs/1.pcd"/>
+  <param name="img_file" type="string" value="$(find autocore_camera_lidar_calib)/data_pairs/1.png"/>
+  <param name="feature_file" type="string" value="$(find autocore_camera_lidar_calib)/results/camera_lidar_feature_front.yaml"/>
+
+  <param name="filter_x_forward"  type="double" value="12.5"/>
+  <param name="filter_x_backward" type="double" value="2.5"/>
+
+  <param name="filter_y_left"  type="double" value="3.5"/>
+  <param name="filter_y_right" type="double" value="-3.5"/>
+
+  <rosparam command="load" file="$(find autocore_camera_lidar_calib)/config/calib.yaml"/>
+
+</launch>
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>autocore_camera_lidar_calib</name>
+  <version>1.0.0</version>
+  <description>The autocore_camera_lidar_calib package</description>
+  <maintainer email="plane.li@autocore.ai">llplane</maintainer>
+  <maintainer email="egon.kang@autocore.ai">Jian</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>libpcl-all-dev</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend> 
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_sensor_msgs</build_depend>
+  <build_depend>tf2_ros</build_depend>
+
+  <build_export_depend>cv_bridge</build_export_depend>
+  <build_export_depend>libpcl-all-dev</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>tf2</build_export_depend>
+  <build_export_depend>tf2_sensor_msgs</build_export_depend>
+  <build_export_depend>tf2_ros</build_export_depend>
+
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>libpcl-all</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_sensor_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+</package>

@@ -1,0 +1,32 @@
+
+pair1:
+  camera:
+    board_right_point:
+      y: 777.4789
+      x: 610.1682
+    board_left_point:
+      x: 305.3564
+      y: 792.2056
+    board_top_point:
+      x: 442.5396
+      y: 629.9014
+    board_down_point:
+      x: 470.5085
+      y: 944.3626
+  lidar:
+    board_left_point:
+      x: 8.034033
+      y: 2.578767
+      z: -0.0841459
+    board_down_point:
+      x: 8.166266
+      y: 1.932388
+      z: -0.6802892
+    board_right_point:
+      y: 1.407423
+      z: -0.0648191
+      x: 8.361131
+    board_top_point:
+      z: 0.536582
+      y: 1.991126
+      x: 8.246736

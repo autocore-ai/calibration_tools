@@ -1,0 +1,17 @@
+<launch>
+  <node 
+    pkg="autocore_camera_lidar_calib"
+    type="caculate_r_t"
+    name="caculate_r_t"
+    output="screen"
+  />
+  
+  <param name="feature_file" type="string" value="$(find autocore_camera_lidar_calib)/results/camera_lidar_feature_front.yaml"/>
+  <param name="calibration_file" type="string" value="$(find autocore_camera_lidar_calib)/results/calibtarion_front.yaml"/>
+  <param name="calibration_file_tf" type="string" value="$(find autocore_camera_lidar_calib)/results/tf_front.yaml"/>
+  <param name="pairnum" type="int" value="1"/>
+  <rosparam command="load" file="$(find autocore_camera_lidar_calib)/config/calib.yaml"/>
+  
+</launch>
+
+

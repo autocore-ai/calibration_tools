@@ -1,0 +1,23 @@
+<launch>
+  <node 
+    pkg="autocore_camera_lidar_calib"
+    type="visual_validate"
+    name="visual_validate"
+    output="screen"
+  />
+   
+  <param name="pcd_file" type="string" value="$(find autocore_camera_lidar_calib)/data_pairs/4.pcd"/>
+  <param name="img_file" type="string" value="$(find autocore_camera_lidar_calib)/data_pairs/4.png"/>
+  <param name="calibration_file" type="string" value="$(find autocore_camera_lidar_calib)/results/calibtarion_front.yaml"/>
+
+  <param name="filter_x_forward"  type="double" value="12.5"/>
+  <param name="filter_x_backward" type="double" value="2.5"/>
+
+  <param name="filter_y_left"  type="double" value="3.5"/>
+  <param name="filter_y_right" type="double" value="-3.5"/>
+
+  <rosparam command="load" file="$(find autocore_camera_lidar_calib)/config/calib.yaml"/>
+   
+</launch>
+
+
