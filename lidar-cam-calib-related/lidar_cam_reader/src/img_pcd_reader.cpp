@@ -50,7 +50,7 @@ void get_all_bag_folder(std::string path, std::vector<std::string> &folder){
        auto current_path = std::string(di->path());
        if(current_path.find("rosbag2")!=std::string::npos){
         std::cout << current_path<< std::endl;
-        folder.push_back(current_path+"/");
+        folder.push_back(current_path);
        }
     }
 }  
@@ -142,7 +142,6 @@ class BagReader : public rclcpp::Node{
           if(delta_time>=camera_start_thres){
             auto img = cv_bridge::toCvCopy(msg,sensor_msgs::image_encodings::BGR8);
             cv::Mat img_cv = img->image;
-            cv::flip(img_cv,img_cv,-1);
             std::string filename = datasave_folder + std::to_string(pair_idx+1) + ".png";
             RCLCPP_INFO(rclcpp::get_logger("camera"), "Writing png file");
             cv::imwrite(filename, img_cv);
